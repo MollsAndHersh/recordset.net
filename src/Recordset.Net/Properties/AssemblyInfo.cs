@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Recordset.Net")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Recordset.Net: ADODB.Recordset wrapper")]
+[assembly: AssemblyDescription(".NET wrapper for ADODB.Recordsets")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("bitbucket.org/christianspecht/recordset.net")]
 [assembly: AssemblyProduct("Recordset.Net")]
-[assembly: AssemblyCopyright("Copyright ©  2011")]
+[assembly: AssemblyCopyright("Copyright © Christian Specht 2011")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
