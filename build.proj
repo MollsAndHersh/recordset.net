@@ -22,7 +22,7 @@
 
   <!-- "Autostart" -->
   <Target Name="Start">
-    <CallTarget Targets="ReleaseFolder"/>
+    <CallTarget Targets="DeleteReleaseFolder"/>
     <CallTarget Targets="Build"/>
 	<CallTarget Targets="RunTests"/>
 	<CallTarget Targets="CopyRelease"/>
@@ -30,9 +30,8 @@
 
 
   <!-- delete and re-create build folder -->
-  <Target Name="ReleaseFolder">
+  <Target Name="DeleteReleaseFolder">
     <RemoveDir Directories="$(ReleaseDir)"/>
-    <MakeDir Directories="$(ReleaseDir)"/>
   </Target>
 
 
@@ -50,6 +49,7 @@
 
   <!-- copy files to release folder -->
   <Target Name="CopyRelease">
+    <MakeDir Directories="$(ReleaseDir)"/>
     <ItemGroup>
       <ReleaseFiles
           Include="$(OutDir)\*.*"
