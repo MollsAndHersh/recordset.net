@@ -9,7 +9,13 @@
     <ReleaseDir>release</ReleaseDir>
 	
     <!-- Build Folder -->
-    <OutDir>src\Recordset.Net\bin\Release</OutDir>	
+    <OutDir>src\Recordset.Net\bin\Release</OutDir>
+	
+	<!-- path to NUnit console runner -->
+    <NUnitExe>lib\NUnit-2.5.10.11092\nunit-console-x86.exe</NUnitExe>
+	
+	<!-- Build Folder for test assembly -->
+    <TestOutDir>src\Recordset.Net.Tests\bin\Release</TestOutDir>
 
   </PropertyGroup>
   
@@ -18,6 +24,7 @@
   <Target Name="Start">
     <CallTarget Targets="ReleaseFolder"/>
     <CallTarget Targets="Build"/>
+	<CallTarget Targets="RunTests"/>
 	<CallTarget Targets="CopyRelease"/>
   </Target>
 
@@ -32,6 +39,12 @@
   <!-- compile solution as release -->
   <Target Name="Build">
     <MSBuild Projects="src\Recordset.Net.sln" Properties="Configuration=Release"/>
+  </Target>
+  
+  
+  <!-- run unit tests -->
+  <Target Name="RunTests">
+	<Exec Command="$(NUnitExe) /nologo $(TestOutDir)\Recordset.Net.Tests.dll"/>
   </Target>
 
 
