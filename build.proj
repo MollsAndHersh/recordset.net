@@ -55,7 +55,8 @@
 	<MakeDir Directories="$(ReleaseDir)"/>
 	<ItemGroup>
 		<ReleaseFiles
-			Include="$(OutDir)\*.*"
+			Include="$(OutDir)\*.*;
+					License.txt"
 			Exclude="$(OutDir)\*.pdb">
 		</ReleaseFiles>
 	</ItemGroup>
