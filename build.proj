@@ -16,6 +16,9 @@
 	
 	<!-- Build Folder for test assembly -->
     <TestOutDir>src\Recordset.Net.Tests\bin\Release</TestOutDir>
+	
+	<!-- run unit tests? -->
+	<RunTests>0</RunTests>
 
   </PropertyGroup>
   
@@ -24,7 +27,7 @@
   <Target Name="Start">
     <CallTarget Targets="DeleteReleaseFolder"/>
     <CallTarget Targets="Build"/>
-	<CallTarget Targets="RunTests"/>
+	<CallTarget Condition="$(RunTests) == '1'" Targets="RunTests"/>
 	<CallTarget Targets="CopyRelease"/>
   </Target>
 
