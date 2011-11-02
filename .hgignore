@@ -4,4 +4,3 @@ syntax: glob
 bin
 obj
 release
-TestResult.xml

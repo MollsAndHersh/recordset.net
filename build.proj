@@ -11,8 +11,8 @@
 		<!-- Build Folder -->
 		<OutDir>src\Recordset.Net\bin\Release</OutDir>
 
-		<!-- path to NUnit console runner -->
-		<NUnitExe>lib\NUnit-2.5.10.11092\nunit-console-x86.exe</NUnitExe>
+		<!-- path to XUnit MSBuild runner -->
+		<XUnitDll>lib\xunit\xunit.runner.msbuild.dll</XUnitDll>
 
 		<!-- Build Folder for test assembly -->
 		<TestOutDir>src\Recordset.Net.Tests\bin\Release</TestOutDir>
@@ -45,8 +45,9 @@
   
   
 	<!-- run unit tests -->
+	<UsingTask AssemblyFile="$(XUnitDll)" TaskName="Xunit.Runner.MSBuild.xunit"/>
 	<Target Name="RunTests">
-		<Exec Command="$(NUnitExe) /nologo $(TestOutDir)\Recordset.Net.Tests.dll"/>
+		<xunit Assembly="$(TestOutDir)\Recordset.Net.Tests.dll" />
 	</Target>
 
 
