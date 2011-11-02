@@ -57,6 +57,7 @@
 	<ItemGroup>
 		<ReleaseFiles
 			Include="$(OutDir)\*.*;
+					readme.md;
 					License.txt"
 			Exclude="$(OutDir)\*.pdb">
 		</ReleaseFiles>
