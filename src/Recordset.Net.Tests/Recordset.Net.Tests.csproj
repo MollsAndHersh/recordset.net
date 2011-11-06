@@ -8,7 +8,7 @@
     <ProjectGuid>{5BF4102B-A142-420B-8F52-B701EF508FB3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Recordset.Net.Tests</RootNamespace>
+    <RootNamespace>RecordsetNet.Tests</RootNamespace>
     <AssemblyName>Recordset.Net.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

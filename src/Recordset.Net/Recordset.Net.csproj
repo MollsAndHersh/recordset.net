@@ -8,7 +8,7 @@
     <ProjectGuid>{CC8562CC-9B6D-434F-95FB-F58F3276EC5A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Recordset.Net</RootNamespace>
+    <RootNamespace>RecordsetNet</RootNamespace>
     <AssemblyName>Recordset.Net</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
