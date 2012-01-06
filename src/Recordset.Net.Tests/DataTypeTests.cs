@@ -5,7 +5,7 @@ namespace RecordsetNet.Tests
     public class DataTypeTests
     {
         [Fact]
-        public void Supported_Type_Is_Converted()
+        public void TryGetAdoTypeForClrType_SupportedType_IsConverted()
         {
             var expected = ADODB.DataTypeEnum.adBoolean;
 
@@ -16,7 +16,7 @@ namespace RecordsetNet.Tests
         }
 
         [Fact]
-        public void Unsupported_Type_Is_Not_Converted()
+        public void TryGetAdoTypeForClrType_UnsupportedType_IsNotConverted()
         {
             bool expected = false;
 

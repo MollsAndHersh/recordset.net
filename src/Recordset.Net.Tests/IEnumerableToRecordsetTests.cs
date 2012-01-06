@@ -4,10 +4,10 @@ using Xunit;
 
 namespace RecordsetNet.Tests
 {
-    public class ToRecordsetTests
+    public class IEnumerableToRecordsetTests
     {
         [Fact]
-        public void Ado_Compatible_Type_Throws_ArgumentException()
+        public void ToRecordset_AdoCompatibleType_ThrowsArgumentException()
         {
             var input = new List<int>();
 
@@ -15,7 +15,7 @@ namespace RecordsetNet.Tests
         }
 
         [Fact]
-        public void Poco_Is_Converted_To_Recordset()
+        public void ToRecordset_PocoList_IsConvertedToRecordset()
         {
             var input = new List<TestPoco>();
             var actual = input.ToRecordset();
