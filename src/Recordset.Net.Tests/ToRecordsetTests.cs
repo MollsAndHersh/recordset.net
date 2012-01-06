@@ -11,11 +11,7 @@ namespace RecordsetNet.Tests
         {
             var input = new List<int>();
 
-            Assert.Throws<ArgumentException>(
-                delegate
-                {
-                    input.ToRecordset();
-                });
+            Assert.Throws<ArgumentException>(() => input.ToRecordset());
         }
 
         [Fact]
