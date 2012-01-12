@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("bitbucket.org/christianspecht/recordset.net")]
 [assembly: AssemblyProduct("Recordset.Net")]
-[assembly: AssemblyCopyright("Copyright © Christian Specht 2011")]
+[assembly: AssemblyCopyright("© Christian Specht 2011-2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
