@@ -7,8 +7,8 @@ For version 1.0, it will only support converting **from** lists of POCOs **to** 
 
 ## How to build
 
-Just run **build.bat** in the main folder. This will create a new folder named **release** with the compiled assembly.  
-To run the unit tests as well, run **build-and-run-tests.bat** (also in the main folder). The **release** folder will not be created if the tests fail.
+Just run `build.bat` in the main folder. This will create a new folder named `release` with the compiled assembly.  
+To run the unit tests as well, run `build-and-run-tests.bat` (also in the main folder). The `release` folder will not be created if the tests fail.
 
 
 ### Acknowledgements
