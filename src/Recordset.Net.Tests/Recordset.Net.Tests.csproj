@@ -45,6 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataTypeTests.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="HelperTests.cs" />
     <Compile Include="IEnumerableToRecordsetTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestPoco.cs" />
