@@ -18,9 +18,9 @@ namespace RecordsetNet.Tests
         public void ToRecordset_PocoList_IsConvertedToRecordset()
         {
             var input = new List<TestPoco>();
-            var actual = input.ToRecordset();
+            var result = input.ToRecordset();
 
-            Assert.True(actual is ADODB.Recordset);
+            Assert.True(result is ADODB.Recordset);
         }
     }
 }
