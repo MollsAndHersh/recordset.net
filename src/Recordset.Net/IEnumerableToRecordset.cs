@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace RecordsetNet
 {
@@ -23,7 +24,30 @@ namespace RecordsetNet
                 throw new ArgumentException("The T of IEnumerable<T> must be a custom POCO, not an ADO compatible type.", "input");
             }
 
-            return new ADODB.Recordset();
+            var rs = new ADODB.Recordset();
+            var type = typeof(T);
+
+            BindingFlags flags = BindingFlags.Public | BindingFlags.Instance;
+            PropertyInfo[] properties = type.GetProperties(flags);
+
+            foreach (var property in properties)
+            {
+                if (DataTypes.TryGetAdoTypeForClrType(property.PropertyType, out adoType))
+                {
+                    int definedSize = 0;
+
+                    if (property.PropertyType == typeof(string))
+                    {
+                        // TODO: set string size to length of longest string in POCO?
+                        definedSize = 1000;
+                    }
+
+                    rs.Fields.Append(property.Name, adoType, definedSize, ADODB.FieldAttributeEnum.adFldIsNullable);
+                }
+            }
+
+            rs.Open();
+            return rs;
         }
     }
 }
