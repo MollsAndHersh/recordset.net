@@ -70,6 +70,7 @@ namespace RecordsetNet.Tests
             Assert.True(Helper.FieldExistsInRecordset(rs, "stringvalue"));
             Assert.True(Helper.FieldExistsInRecordset(rs, "int32value"));
             Assert.True(Helper.FieldExistsInRecordset(rs, "boolvalue"));
+            Assert.True(Helper.FieldExistsInRecordset(rs, "boolvalueinderived"));
         }
     }
 }
