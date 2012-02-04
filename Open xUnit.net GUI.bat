@@ -1,0 +1,1 @@
+start "" "lib\xunit\xunit.gui.clr4.x86.exe" "src\Recordset.Net.Tests\bin\Release\Recordset.Net.Tests.dll"
