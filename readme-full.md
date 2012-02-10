@@ -1,9 +1,13 @@
-# Recordset.Net
+![logo](https://bitbucket.org/christianspecht/recordset.net/raw/tip/img/logo64x64.png)
 
 Recordset.Net is a library to convert .NET POCOs to ADODB.Recordsets.  
 For version 1.0, it will only support converting **from** lists of POCOs **to** read-only Recordsets, not vice-versa.  
 *(converting to Recordsets is the only thing **I** need at the moment)*
 
+## Links
+
+- [Main Project page on Bitbucket](https://bitbucket.org/christianspecht/recordset.net)
+- [Download page](https://bitbucket.org/christianspecht/recordset.net/downloads)
 
 ## How to build
 
