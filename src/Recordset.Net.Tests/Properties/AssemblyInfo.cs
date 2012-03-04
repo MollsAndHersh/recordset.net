@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Recordset.Net.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("bitbucket.org/christianspecht/recordset.net")]
+[assembly: AssemblyCompany("http://christianspecht.de/recordset-net")]
 [assembly: AssemblyProduct("Recordset.Net")]
 [assembly: AssemblyCopyright("© Christian Specht 2011-2012")]
 [assembly: AssemblyTrademark("")]
