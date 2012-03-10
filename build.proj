@@ -20,21 +20,26 @@
 		<!-- run unit tests? -->
 		<RunTests>0</RunTests>
 
+		<!-- temporary NuGet working folder -->
+		<NuGetDir>nuget-tmp</NuGetDir>
+
 	</PropertyGroup>
   
 
 	<!-- "Autostart" -->
 	<Target Name="Start">
-		<CallTarget Targets="DeleteReleaseFolder"/>
+		<CallTarget Targets="DeleteFolders"/>
 		<CallTarget Targets="Build"/>
 		<CallTarget Condition="$(RunTests) == '1'" Targets="RunTests"/>
 		<CallTarget Targets="CopyRelease"/>
+		<CallTarget Targets="NuGet"/>
 	</Target>
 
 
-	<!-- delete and re-create build folder -->
-	<Target Name="DeleteReleaseFolder">
+	<!-- delete build folders -->
+	<Target Name="DeleteFolders">
 		<RemoveDir Directories="$(ReleaseDir)"/>
+		<RemoveDir Directories="$(NuGetDir)"/>
 	</Target>
 
 
@@ -63,6 +68,34 @@
 		</ReleaseFiles>
 	</ItemGroup>
 	<Copy SourceFiles="@(ReleaseFiles)" DestinationFolder="$(ReleaseDir)\bin"/>
+	</Target>
+
+
+	<!-- make NuGet package-->
+	<Target Name="NuGet">
+		<MakeDir Directories="$(NuGetDir)\lib\net40"/>
+		<MakeDir Directories="$(ReleaseDir)\nuget"/>
+		
+		<!-- 1. copy the whole release folder (except the assemblies) and the nuspec file into the temp. NuGet folder -->
+		<ItemGroup>
+			<PackageFiles1
+				Include="$(ReleaseDir)\bin\*.*;
+						nuget\Recordset.Net.nuspec"
+				Exclude="$(ReleaseDir)\bin\*.dll">
+			</PackageFiles1>
+		</ItemGroup>
+		<Copy SourceFiles="@(PackageFiles1)" DestinationFolder="$(NuGetDir)"/>
+		
+		<!-- 2. copy the assemblies into the net40 subfolder -->
+		<ItemGroup>
+			<PackageFiles2
+				Include="$(ReleaseDir)\bin\*.dll">
+			</PackageFiles2>
+		</ItemGroup>
+		<Copy SourceFiles="@(PackageFiles2)" DestinationFolder="$(NuGetDir)\lib\net40"/>
+		
+		<!-- 3. create package -->
+		<Exec Command="lib\nuget\nuget.exe pack $(NuGetDir)\recordset.net.nuspec -OutputDirectory $(ReleaseDir)\nuget"></Exec>
 	</Target>
 
 </Project>

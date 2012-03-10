@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Recordset.Net</id>
+    <version>1.0.0</version>
+    <authors>Christian Specht</authors>
+    <owners>Christian Specht</owners>
+    <licenseUrl>https://bitbucket.org/christianspecht/recordset.net/raw/tip/License.txt</licenseUrl>
+    <projectUrl>http://christianspecht.de/recordset-net/</projectUrl>
+    <iconUrl>https://bitbucket.org/christianspecht/recordset.net/raw/tip/img/logo64x64.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Converts .NET POCOs to ADODB.Recordsets.</description>
+    <copyright>Copyright Christian Specht 2011-2012</copyright>
+    <tags>.NET Recordset Convert</tags>
+  </metadata>
+</package>
