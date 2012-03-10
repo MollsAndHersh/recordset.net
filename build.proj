@@ -53,7 +53,7 @@
 
 	<!-- copy files to release folder -->
 	<Target Name="CopyRelease">
-	<MakeDir Directories="$(ReleaseDir)"/>
+	<MakeDir Directories="$(ReleaseDir)\bin"/>
 	<ItemGroup>
 		<ReleaseFiles
 			Include="$(OutDir)\*.*;
@@ -62,7 +62,7 @@
 			Exclude="$(OutDir)\*.pdb">
 		</ReleaseFiles>
 	</ItemGroup>
-	<Copy SourceFiles="@(ReleaseFiles)" DestinationFolder="$(ReleaseDir)"/>
+	<Copy SourceFiles="@(ReleaseFiles)" DestinationFolder="$(ReleaseDir)\bin"/>
 	</Target>
 
 </Project>
