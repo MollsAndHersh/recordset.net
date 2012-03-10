@@ -20,6 +20,9 @@
 		<!-- run unit tests? -->
 		<RunTests>0</RunTests>
 
+		<!-- create NuGet package? -->
+		<CreatePackage>0</CreatePackage>
+
 		<!-- temporary NuGet working folder -->
 		<NuGetDir>nuget-tmp</NuGetDir>
 
@@ -32,7 +35,7 @@
 		<CallTarget Targets="Build"/>
 		<CallTarget Condition="$(RunTests) == '1'" Targets="RunTests"/>
 		<CallTarget Targets="CopyRelease"/>
-		<CallTarget Targets="NuGet"/>
+		<CallTarget Condition="$(CreatePackage) == '1'" Targets="NuGet"/>
 	</Target>
 
 
