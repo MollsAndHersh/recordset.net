@@ -98,7 +98,7 @@
 		<Copy SourceFiles="@(PackageFiles2)" DestinationFolder="$(NuGetDir)\lib\net40"/>
 		
 		<!-- 3. create package -->
-		<Exec Command="lib\nuget\nuget.exe pack $(NuGetDir)\recordset.net.nuspec -OutputDirectory $(ReleaseDir)\nuget"></Exec>
+		<Exec Command="lib\nuget\nuget.exe pack $(NuGetDir)\recordset.net.nuspec -OutputDirectory $(ReleaseDir)\nuget -Version $(VersionNumber)"></Exec>
 	</Target>
 
 </Project>

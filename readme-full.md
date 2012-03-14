@@ -22,6 +22,7 @@ Recordset.Net makes use of the following open source projects:
 
  - [xUnit.net](http://xunit.codeplex.com/)
  - [NuGet](http://nuget.codeplex.com/)
+ - [MSBuild Community Tasks](http://msbuildtasks.tigris.org/)
  
 ### License
 
