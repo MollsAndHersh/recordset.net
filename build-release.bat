@@ -1,5 +1,5 @@
 @echo off
 
-build.bat 1 1
+build.bat 1 1 1
 
 pause
