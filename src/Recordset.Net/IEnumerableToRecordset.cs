@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 
 namespace RecordsetNet
@@ -30,6 +31,7 @@ namespace RecordsetNet
             BindingFlags flags = BindingFlags.Public | BindingFlags.Instance;
             PropertyInfo[] properties = type.GetProperties(flags);
 
+            // create properties
             foreach (var property in properties)
             {
                 if (DataTypes.TryGetAdoTypeForClrType(property.PropertyType, out adoType))
@@ -46,7 +48,24 @@ namespace RecordsetNet
                 }
             }
 
+            // insert data
             rs.Open();
+
+            if (input.Any())
+            {
+                foreach (var item in input)
+                {
+                    rs.AddNew();
+
+                    foreach (var property in properties)
+                    {
+                        rs.Fields[property.Name].Value = property.GetValue(item, null);
+                    }
+
+                    rs.Update();
+                }
+            }
+
             return rs;
         }
     }

@@ -72,5 +72,42 @@ namespace RecordsetNet.Tests
             Assert.True(Helper.FieldExistsInRecordset(rs, "boolvalue"));
             Assert.True(Helper.FieldExistsInRecordset(rs, "boolvalueinderived"));
         }
+
+        [Fact]
+        public void ToRecordset_PocoListWith3Items_AllItemsAreConverted()
+        {
+            var input = new List<TestPoco>();
+
+            for (int i = 0; i < 3; i++)
+            {
+                var item = new TestPoco
+                {
+                    BoolValue = true,
+                    Int32Value = i,
+                    StringValue = "foo"
+                };
+
+                input.Add(item);
+            }
+
+            var rs = input.ToRecordset();
+
+            Assert.Equal(3, rs.RecordCount);
+        }
+
+        [Fact]
+        public void ToRecordset_PocoList_FieldsAreEqual()
+        {
+            var input = new List<TestPoco>();
+            var expected = new TestPoco { BoolValue = true, Int32Value = 1, StringValue = "foo" };
+            input.Add(expected);
+
+            var actual = input.ToRecordset();
+
+            Assert.Equal((bool)actual.Fields["BoolValue"].Value, expected.BoolValue);
+            Assert.Equal((int)actual.Fields["Int32Value"].Value, expected.Int32Value);
+            Assert.Equal((string)actual.Fields["StringValue"].Value, expected.StringValue);
+        }
+
     }
 }
