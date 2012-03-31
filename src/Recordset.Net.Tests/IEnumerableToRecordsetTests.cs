@@ -104,9 +104,9 @@ namespace RecordsetNet.Tests
 
             var actual = input.ToRecordset();
 
-            Assert.Equal((bool)actual.Fields["BoolValue"].Value, expected.BoolValue);
-            Assert.Equal((int)actual.Fields["Int32Value"].Value, expected.Int32Value);
-            Assert.Equal((string)actual.Fields["StringValue"].Value, expected.StringValue);
+            Assert.Equal((bool)actual.Fields["boolvalue"].Value, expected.BoolValue);
+            Assert.Equal((int)actual.Fields["int32value"].Value, expected.Int32Value);
+            Assert.Equal((string)actual.Fields["stringvalue"].Value, expected.StringValue);
         }
 
     }
