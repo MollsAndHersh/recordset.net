@@ -109,5 +109,17 @@ namespace RecordsetNet.Tests
             Assert.Equal((string)actual.Fields["stringvalue"].Value, expected.StringValue);
         }
 
+        [Fact]
+        public void ToRecordset_PocoListWithNull_IsConverted()
+        {
+            var input = new List<TestPocoNullable>();
+            input.Add(new TestPocoNullable { BoolValue = null, Int32Value = null, StringValue = null });
+
+            var actual = input.ToRecordset();
+
+            Assert.Equal(actual.Fields["boolvalue"].Value, DBNull.Value);
+            Assert.Equal(actual.Fields["int32value"].Value, DBNull.Value);
+            Assert.Equal(actual.Fields["stringvalue"].Value, DBNull.Value);
+        }
     }
 }

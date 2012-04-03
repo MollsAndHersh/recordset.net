@@ -17,6 +17,17 @@ namespace RecordsetNet.Tests
         }
 
         [Fact]
+        public void TryGetAdoTypeForClrType_SupportedNullableType_IsConverted()
+        {
+            var expected = ADODB.DataTypeEnum.adBoolean;
+
+            var actual = new ADODB.DataTypeEnum();
+            DataTypes.TryGetAdoTypeForClrType(typeof(bool?), out actual);
+
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
         public void TryGetAdoTypeForClrType_UnsupportedType_IsNotConverted()
         {
             bool expected = false;

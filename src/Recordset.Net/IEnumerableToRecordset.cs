@@ -59,7 +59,12 @@ namespace RecordsetNet
 
                     foreach (var property in properties)
                     {
-                        rs.Fields[property.Name].Value = property.GetValue(item, null);
+                        var value = property.GetValue(item, null);
+
+                        if (value != null)
+                        {
+                            rs.Fields[property.Name].Value = value;
+                        }
                     }
 
                     rs.Update();

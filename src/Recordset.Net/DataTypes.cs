@@ -37,7 +37,14 @@ namespace RecordsetNet
         /// <returns>True if an ADODB type was found.</returns>
         public static bool TryGetAdoTypeForClrType(Type clrType, out ADODB.DataTypeEnum adoType)
         {
-            return Types.TryGetValue(clrType, out adoType);
+            var type = clrType;
+
+            if (type != null && clrType.IsGenericType && clrType.GetGenericTypeDefinition() == typeof(Nullable<>))
+            {
+                type = Nullable.GetUnderlyingType(clrType);
+            }
+
+            return Types.TryGetValue(type, out adoType);
         }
     }
 }
