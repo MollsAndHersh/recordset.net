@@ -7,7 +7,7 @@
     <owners>Christian Specht</owners>
     <licenseUrl>https://bitbucket.org/christianspecht/recordset.net/raw/tip/License.txt</licenseUrl>
     <projectUrl>http://christianspecht.de/recordset-net/</projectUrl>
-    <iconUrl>https://bitbucket.org/christianspecht/recordset.net/raw/tip/img/logo64x64.png</iconUrl>
+    <iconUrl>https://bitbucket.org/christianspecht/recordset.net/raw/tip/img/logo128x128.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Converts .NET POCOs to ADODB.Recordsets.</description>
     <copyright>Copyright Christian Specht 2011-2012</copyright>
