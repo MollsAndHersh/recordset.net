@@ -71,13 +71,15 @@
 	<ItemGroup>
 		<ReleaseFiles
 			Include="$(OutDir)\*.*;
-					readme.md;
+					readme-release.txt;
 					License.txt"
 			Exclude="$(OutDir)\*.pdb;
 					$(OutDir)\Interop.ADODB.dll">
 		</ReleaseFiles>
 	</ItemGroup>
 	<Copy SourceFiles="@(ReleaseFiles)" DestinationFolder="$(ReleaseDir)\bin"/>
+	
+	<Move SourceFiles="$(ReleaseDir)\bin\readme-release.txt" DestinationFiles="$(ReleaseDir)\bin\readme.txt" />
 	</Target>
 
 
