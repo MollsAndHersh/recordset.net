@@ -9,6 +9,15 @@ For version 1.0, it will only support converting **from** lists of POCOs **to** 
 - [Main Project page on Bitbucket](https://bitbucket.org/christianspecht/recordset.net)
 - [Download page](https://bitbucket.org/christianspecht/recordset.net/downloads)
 
+## Setup
+
+You can either download Recordset.Net from Bitbucket (link above) or install with [NuGet](https://nuget.org/):
+
+[![NuGet](https://bitbucket.org/christianspecht/recordset.net/raw/tip/img/nuget.png)](https://nuget.org/packages/Recordset.Net)
+
+Please note that in order to use Recordset.Net, you need to add a COM reference to "Microsoft ActiveX Data Objects 2.8 Library" to your project.
+
+
 ## How to build
 
 Just run `build.bat` in the main folder. This will create a new folder named `release` with the compiled assembly.  
