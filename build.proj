@@ -73,7 +73,8 @@
 			Include="$(OutDir)\*.*;
 					readme.md;
 					License.txt"
-			Exclude="$(OutDir)\*.pdb">
+			Exclude="$(OutDir)\*.pdb;
+					$(OutDir)\Interop.ADODB.dll">
 		</ReleaseFiles>
 	</ItemGroup>
 	<Copy SourceFiles="@(ReleaseFiles)" DestinationFolder="$(ReleaseDir)\bin"/>
@@ -85,7 +86,7 @@
 		<MakeDir Directories="$(NuGetDir)\lib\net40"/>
 		<MakeDir Directories="$(ReleaseDir)\nuget"/>
 		
-		<!-- 1. copy the whole release folder (except the assemblies) and the nuspec file into the temp. NuGet folder -->
+		<!-- 1. copy the whole release folder (except the assembly and "normal" readme) and the nuspec file into the temp. NuGet folder -->
 		<ItemGroup>
 			<PackageFiles1
 				Include="$(ReleaseDir)\bin\*.*;
@@ -96,7 +97,7 @@
 		</ItemGroup>
 		<Copy SourceFiles="@(PackageFiles1)" DestinationFolder="$(NuGetDir)"/>
 		
-		<!-- 2. copy the assemblies into the net40 subfolder -->
+		<!-- 2. copy the assembly into the net40 subfolder -->
 		<ItemGroup>
 			<PackageFiles2
 				Include="$(ReleaseDir)\bin\*.dll;
