@@ -10,12 +10,13 @@ For version 1.0, it will only support converting **from** lists of POCOs **to** 
 
 - [Main Project page on Bitbucket](https://bitbucket.org/christianspecht/recordset.net)
 - [Download page](https://bitbucket.org/christianspecht/recordset.net/downloads)
+- [NuGet gallery](https://nuget.org/packages/Recordset.Net)
 
 ---
 
 ## Setup
 
-You can either download Recordset.Net from Bitbucket (link above) or install with [NuGet](https://nuget.org/):
+You can either download Recordset.Net from the download page on Bitbucket (link above) or install with [NuGet](https://nuget.org/):
 
 [![NuGet](https://bitbucket.org/christianspecht/recordset.net/raw/tip/img/nuget.png)](https://nuget.org/packages/Recordset.Net)
 
@@ -71,7 +72,7 @@ Recordset.Net makes use of the following open source projects:
 
  - [xUnit.net](http://xunit.codeplex.com/)
  - [NuGet](http://nuget.codeplex.com/)
- - [MSBuild Community Tasks](http://msbuildtasks.tigris.org/)
+ - [MSBuild Community Tasks](https://github.com/loresoft/msbuildtasks)
 
 ---
 
