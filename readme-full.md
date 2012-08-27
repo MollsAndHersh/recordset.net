@@ -8,9 +8,10 @@ For version 1.0, it will only support converting **from** lists of POCOs **to** 
 
 ## Links
 
-- [Main Project page on Bitbucket](https://bitbucket.org/christianspecht/recordset.net)
 - [Download page](https://bitbucket.org/christianspecht/recordset.net/downloads)
 - [NuGet gallery](https://nuget.org/packages/Recordset.Net)
+- [Found a bug?](https://bitbucket.org/christianspecht/recordset.net/issues/new)
+- [Main Project page on Bitbucket](https://bitbucket.org/christianspecht/recordset.net)
 
 ---
 
