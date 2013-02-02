@@ -1,4 +1,4 @@
-![logo](https://bitbucket.org/christianspecht/recordset.net/raw/tip/img/logo64x64.png)
+![logo](https://bitbucket.org/christianspecht/recordset.net/raw/tip/img/logo128x128.png)
 
 Recordset.Net is a library to convert .NET POCOs to ADODB.Recordsets.  
 For version 1.0, it will only support converting **from** lists of POCOs **to** read-only Recordsets, not vice-versa.  
@@ -10,8 +10,8 @@ For version 1.0, it will only support converting **from** lists of POCOs **to** 
 
 - [Download page](https://bitbucket.org/christianspecht/recordset.net/downloads)
 - [NuGet gallery](https://nuget.org/packages/Recordset.Net)
-- [Found a bug?](https://bitbucket.org/christianspecht/recordset.net/issues/new)
-- [Main Project page on Bitbucket](https://bitbucket.org/christianspecht/recordset.net)
+- [Report a bug](https://bitbucket.org/christianspecht/recordset.net/issues/new)
+- [Main project page on Bitbucket](https://bitbucket.org/christianspecht/recordset.net)
 
 ---
 
@@ -21,7 +21,7 @@ You can either download Recordset.Net from the download page on Bitbucket (link 
 
 [![NuGet](https://bitbucket.org/christianspecht/recordset.net/raw/tip/img/nuget.png)](https://nuget.org/packages/Recordset.Net)
 
-Please note that in order to use Recordset.Net, you need to add a COM reference to "Microsoft ActiveX Data Objects 2.8 Library" to your project.  
+Please note that in order to use Recordset.Net, you need to add a COM reference to `Microsoft ActiveX Data Objects 2.8 Library` to your project.  
 *(you need to add the reference yourself **even if you use NuGet** to install - apparently it's not possible to add COM references with NuGet, so I couldn't do it in the package)*
 
 ---
@@ -34,7 +34,7 @@ If you try to use `.ToRecordset()` on something like an `IEnumerable<string>` or
 
 Each property of the POCO will be converted into a field in the Recordset, but only if its type is supported by ADO. POCO properties with types unsupported by ADO will be omitted. You can see a list of the supported CLR types and their ADO counterparts [in the code](https://bitbucket.org/christianspecht/recordset.net/src/tip/src/Recordset.Net/DataTypes.cs).
 
-#### Example
+### Example
 
 Given this POCO:
 
@@ -80,3 +80,10 @@ Recordset.Net makes use of the following open source projects:
 ### License
 
 Recordset.Net is licensed under the MIT License. See [License.txt](https://bitbucket.org/christianspecht/recordset.net/raw/tip/License.txt) for details.
+
+---
+
+### Project Info
+
+<script type="text/javascript" src="http://www.ohloh.net/p/587031/widgets/project_basic_stats.js"></script>  
+<script type="text/javascript" src="http://www.ohloh.net/p/587031/widgets/project_languages.js"></script>
