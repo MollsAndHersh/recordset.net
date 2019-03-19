@@ -40,7 +40,7 @@ namespace RecordsetNet.Tests
             var input = new List<TestPoco>();
             var rs = input.ToRecordset();
 
-            Assert.Equal(rs.Fields.Count, 3);
+            Assert.Equal(3, rs.Fields.Count);
         }
 
         [Fact]
@@ -104,9 +104,9 @@ namespace RecordsetNet.Tests
 
             var actual = input.ToRecordset();
 
-            Assert.Equal((bool)actual.Fields["boolvalue"].Value, expected.BoolValue);
-            Assert.Equal((int)actual.Fields["int32value"].Value, expected.Int32Value);
-            Assert.Equal((string)actual.Fields["stringvalue"].Value, expected.StringValue);
+            Assert.Equal(expected.BoolValue, (bool)actual.Fields["boolvalue"].Value);
+            Assert.Equal(expected.Int32Value, (int)actual.Fields["int32value"].Value);
+            Assert.Equal(expected.StringValue, (string)actual.Fields["stringvalue"].Value);
         }
 
         [Fact]
@@ -117,9 +117,9 @@ namespace RecordsetNet.Tests
 
             var actual = input.ToRecordset();
 
-            Assert.Equal(actual.Fields["boolvalue"].Value, DBNull.Value);
-            Assert.Equal(actual.Fields["int32value"].Value, DBNull.Value);
-            Assert.Equal(actual.Fields["stringvalue"].Value, DBNull.Value);
+            Assert.Equal(DBNull.Value, actual.Fields["boolvalue"].Value);
+            Assert.Equal(DBNull.Value, actual.Fields["int32value"].Value);
+            Assert.Equal(DBNull.Value, actual.Fields["stringvalue"].Value);
         }
 
         [Fact]
