@@ -71,8 +71,8 @@ You can also run `build-release.bat` to do all of the above **and** create a NuG
 
 Recordset.Net makes use of the following open source projects:
 
- - [xUnit.net](http://xunit.codeplex.com/)
- - [NuGet](http://nuget.codeplex.com/)
+ - [xUnit.net](https://xunit.github.io/)
+ - [NuGet](https://www.nuget.org/)
  - [MSBuild Community Tasks](https://github.com/loresoft/msbuildtasks)
 
 ---
@@ -85,5 +85,5 @@ Recordset.Net is licensed under the MIT License. See [License.txt](https://bitbu
 
 ### Project Info
 
-<script type="text/javascript" src="http://www.ohloh.net/p/587031/widgets/project_basic_stats.js"></script>  
-<script type="text/javascript" src="http://www.ohloh.net/p/587031/widgets/project_languages.js"></script>
+<script type="text/javascript" src="https://www.openhub.net/p/587031/widgets/project_basic_stats.js"></script>  
+<script type="text/javascript" src="https://www.openhub.net/p/587031/widgets/project_languages.js"></script>
