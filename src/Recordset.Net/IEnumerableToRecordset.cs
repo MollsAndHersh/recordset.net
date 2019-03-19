@@ -44,6 +44,11 @@ namespace RecordsetNet
                         definedSize = 1000;
                     }
 
+                    if (property.PropertyType == typeof(Guid))
+                    {
+                        definedSize = 38;
+                    }
+
                     rs.Fields.Append(property.Name, adoType, definedSize, ADODB.FieldAttributeEnum.adFldIsNullable);
                 }
             }
@@ -60,6 +65,11 @@ namespace RecordsetNet
                     foreach (var property in properties)
                     {
                         var value = property.GetValue(item, null);
+
+                        if (property.PropertyType == typeof(Guid))
+                        {
+                            value = value.ToString();
+                        }
 
                         if (value != null)
                         {

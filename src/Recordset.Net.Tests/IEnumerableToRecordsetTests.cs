@@ -121,5 +121,17 @@ namespace RecordsetNet.Tests
             Assert.Equal(actual.Fields["int32value"].Value, DBNull.Value);
             Assert.Equal(actual.Fields["stringvalue"].Value, DBNull.Value);
         }
+
+        [Fact]
+        public void ToRecordset_PocoWithGuid_IsConverted()
+        {
+            string guid = "6f0dd954-5e07-4406-a5d5-7e6cedf5aee5";
+            var input = new List<TestPocoGuid>();
+            input.Add(new TestPocoGuid { GuidValue = new Guid(guid) });
+
+            var actual = input.ToRecordset();
+
+            Assert.Equal(guid, actual.Fields["guidvalue"].Value);
+        }
     }
 }
