@@ -7,4 +7,4 @@ See [https://christianspecht.de/recordset-net](https://christianspecht.de/record
 
 ### License
 
-Recordset.Net is licensed under the MIT License. See [License.txt](https://bitbucket.org/christianspecht/recordset.net/raw/tip/License.txt) for details.
+Recordset.Net is licensed under the MIT License. See [License.txt](https://christianspecht.de/recordset-net/#license) for details.
