@@ -2,7 +2,7 @@
 
 Recordset.Net is a library to convert .NET POCOs to ADODB.Recordsets.
 
-See [http://christianspecht.de/recordset-net](http://christianspecht.de/recordset-net) for more information.
+See [https://christianspecht.de/recordset-net](https://christianspecht.de/recordset-net) for more information.
 
 
 ### License
